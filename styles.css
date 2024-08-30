@@ -1,0 +1,190 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e6f7f9; /* Color de fondo suave, azul claro */
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.nurse-presentation {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin: 20px 0;
+    background-color: #ffffff; /* Fondo blanco para la presentación */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    border: 2px solid #b3d9d9; /* Borde azul claro */
+}
+
+.nurse {
+    width: 150px;
+    height: 150px;
+    background-image: url('https://i.postimg.cc/SRf424Mp/Whats-App-Image-2024-08-30-at-3-15-21-AM.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    animation: jump 2s infinite;
+}
+
+.message {
+    margin-top: 20px;
+}
+
+.message h1 {
+    font-size: 28px;
+    color: #006699; /* Color azul oscuro para el título */
+}
+
+.message p {
+    font-size: 18px;
+    color: #4d8a8a; /* Color verde menta para el texto */
+}
+
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-25px);
+    }
+}
+
+#next-section {
+    padding: 12px 24px;
+    margin: 20px 0;
+    font-size: 20px;
+    background-color: #4db8ff; /* Color azul claro para el botón */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#next-section:hover {
+    background-color: #3399ff; /* Azul más oscuro en hover */
+}
+
+.images-section {
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco para las imágenes */
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Mostrar imágenes en cascada */
+    gap: 20px; /* Espacio entre cartas */
+    align-items: center;
+    border-radius: 15px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border: 2px solid #b3d9d9; /* Borde azul claro */
+    padding: 20px; /* Espaciado interno */
+    background-color: #f9f9f9; /* Fondo ligeramente gris para destacar las cartas */
+}
+
+.card {
+    width: 500px;
+    height: 400px;
+    perspective: 1000px;
+    margin: 0 auto;
+    border: 1px solid #b3d9d9; /* Borde azul claro alrededor de la carta */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    border-radius: 15px; /* Esquinas redondeadas */
+    overflow: hidden; /* Asegura que el contenido no sobresalga */
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px; /* Esquinas redondeadas */
+}
+
+.card-front {
+    background-color: #ffffff; /* Fondo blanco para la parte frontal de la carta */
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background-color: #f0f8ff; /* Color de fondo más suave para el reverso */
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px; /* Esquinas redondeadas para las imágenes */
+}
+
+.card p {
+    font-size: 18px;
+    color: #006699; /* Color azul oscuro para el texto */
+    margin-top: 10px;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+
+.sticker {
+    position: absolute;
+    width: 50px; /* Ajusta el tamaño según sea necesario */
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 10; /* Asegura que los stickers estén sobre el contenido */
+}
+
+.butterfly {
+    background-image: url('URL_DE_TU_MARIPOSA'); /* Cambia por el enlace de la mariposa */
+    top: 10%; /* Ajusta la posición */
+    left: 5%; /* Ajusta la posición */
+    animation: fly 10s infinite;
+}
+
+.medical-kit {
+    background-image: url('URL_DE_TU_MALETÍN'); /* Cambia por el enlace del maletín */
+    bottom: 5%; /* Ajusta la posición */
+    right: 10%; /* Ajusta la posición */
+    animation: float 8s infinite;
+}
+
+/* Animaciones opcionales */
+@keyframes fly {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(0); }
+}
+
